@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161118001732) do
+ActiveRecord::Schema.define(version: 20161118144848) do
 
   create_table "sightings", force: :cascade do |t|
     t.string   "user"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20161118001732) do
     t.integer  "specieid"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "species", force: :cascade do |t|
+    t.string   "common_name"
+    t.string   "generic_name"
+    t.string   "specific_name"
+    t.string   "description"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
 end
