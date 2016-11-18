@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @sighting.user %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sighting.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @sighting.description %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @sighting.userid %>
+</p>
+
+<p>
+  <strong>Speccieis:</strong>
+  <%= @sighting.speccieis %>
+</p>
+
+<%= link_to 'Edit', edit_sighting_path(@sighting) %> |
+<%= link_to 'Back', sightings_path %>
