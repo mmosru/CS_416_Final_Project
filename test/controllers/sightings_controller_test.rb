@@ -17,7 +17,7 @@ class SightingsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create sighting" do
     assert_difference('Sighting.count') do
-      post sightings_url, params: { sighting: { description: @sighting.description, name: @sighting.name, speciesid: @sighting.speciesid, user: @sighting.user, userid: @sighting.userid } }
+      post sightings_url, params: { sighting: { description: @sighting.description, name: @sighting.name,user: @sighting.user, userid: @sighting.userid } }
     end
 
     assert_redirected_to sighting_url(Sighting.last)
@@ -34,7 +34,7 @@ class SightingsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update sighting" do
-    patch sighting_url(@sighting), params: { sighting: { description: @sighting.description, name: @sighting.name, speciesid: @sighting.speciesid, user: @sighting.user, userid: @sighting.userid } }
+    patch sighting_url(@sighting), params: { sighting: { description: @sighting.description, name: @sighting.name,user: @sighting.user, userid: @sighting.userid } }
     assert_redirected_to sighting_url(@sighting)
   end
 
