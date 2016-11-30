@@ -2,10 +2,14 @@
 
 one:
   location: MyString
-  observe_tm: 2016-11-30 19:26:28
+  observe_tm: 2016-11-30 20:00:38
   notes: MyString
+  species: one
+  user: one
 
 two:
   location: MyString
-  observe_tm: 2016-11-30 19:26:28
+  observe_tm: 2016-11-30 20:00:38
   notes: MyString
+  species: two
+  user: two
