@@ -1,26 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @sighting.user %>
+  <strong>Location:</strong>
+  <%= @sighting.location %>
 </p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @sighting.name %>
+  <strong>Observe tm:</strong>
+  <%= @sighting.observe_tm %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @sighting.description %>
+  <strong>Notes:</strong>
+  <%= @sighting.notes %>
 </p>
-
-<p>
-  <strong>Userid:</strong>
-  <%= @sighting.userid %>
-</p>
-
-
 
 <%= link_to 'Edit', edit_sighting_path(@sighting) %> |
 <%= link_to 'Back', sightings_path %>

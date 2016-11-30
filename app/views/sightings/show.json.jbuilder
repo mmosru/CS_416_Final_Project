@@ -1,1 +1,1 @@
-json.extract! @sighting, :id, :user, :name, :description, :userid, :created_at, :updated_at
+json.extract! @sighting, :id, :location, :observe_tm, :notes, :created_at, :updated_at

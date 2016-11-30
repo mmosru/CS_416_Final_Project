@@ -12,26 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user %>
-    <%= f.text_field :user %>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
   </div>
 
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.label :observe_tm %>
+    <%= f.datetime_select :observe_tm %>
   </div>
 
   <div class="field">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.label :notes %>
+    <%= f.text_field :notes %>
   </div>
-
-  <div class="field">
-    <%= f.label :userid %>
-    <%= f.number_field :userid %>
-  </div>
-
-  
 
   <div class="actions">
     <%= f.submit %>
