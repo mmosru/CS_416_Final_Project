@@ -20,8 +20,8 @@
         <td><%= sighting.location %></td>
         <td><%= sighting.observe_tm %></td>
         <td><%= sighting.notes %></td>
-        <td><%= sighting.species %></td>
-        <td><%= sighting.user %></td>
+        <td><%= sighting.species.common_name %></td>
+        <td><%= sighting.user.email %></td>
         <td><%= link_to 'Show', sighting %></td>
         <td><%= link_to 'Edit', edit_sighting_path(sighting) %></td>
         <td><%= link_to 'Destroy', sighting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
