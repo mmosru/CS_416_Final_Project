@@ -9,7 +9,7 @@ class SpeciesController < ApplicationController
   
   def search
     term = params[:search] + '%'
-    @species = Species.where(['specific_name LIKE ? or generic_name LIKE ? or common_name LIKE ?', term, term, term])
+    @species = Species.where(['lower(specific_name) LIKE ? OR lower(generic_name) LIKE ? OR lower(common_name) LIKE ?', term.downcase, term.downcase, term.downcase])
     respond_to do |format|
       format.html
       format.js
