@@ -1,0 +1,10 @@
+<% if signed_in? %>
+       Signed in: <%= session[:user_id] %>
+       <li><a href="/species/new">List a new species</a></li>
+       <li><a href="/sightings/new">Report a sighting</a></li>
+       <li><a href="/signout">Sign out</a></li>
+    <% else %>
+   
+    <li><a href="/signup">Sign up (Create user acct for W.O.C.A.)</a></li>
+         
+    <% end %>
