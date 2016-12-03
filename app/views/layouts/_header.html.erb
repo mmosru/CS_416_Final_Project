@@ -1,3 +1,5 @@
+<%= image_tag("logo.png", :alt => "WOCA logo") %>
+
 <% if signed_in? %>
        Signed in: <%= session[:user_id] %>
        <li><a href="/species/new">List a new species</a></li>
