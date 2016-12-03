@@ -6,6 +6,15 @@ class SpeciesController < ApplicationController
   def index
     @species = Species.all
   end
+  
+  def search
+    term = params[:search] + '%'
+    @species = Species.where(['specific_name LIKE ? or generic_name LIKE ? or common_name LIKE ?', term, term, term])
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
 
   # GET /species/1
   # GET /species/1.json
