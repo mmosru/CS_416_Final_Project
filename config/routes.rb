@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'static_pages/home'
   
   post '/search',  to: 'species#search'
+  
+  post '/autocl',  to: 'species#autocl'
 
   resources :species
   

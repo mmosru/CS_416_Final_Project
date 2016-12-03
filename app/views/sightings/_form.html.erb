@@ -25,16 +25,18 @@
     <%= f.label :notes %>
     <%= f.text_field :notes %>
   </div>
+  
 
-  <div class="field">
-    <%= f.label :species_id %>
-    <%= f.text_field :species_id %>
-  </div>
+<% @species = Species.all %>
 
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
-  </div>
+<%= f.label :species_id %>
+<%= f.collection_select :species_id, @species, :id, :common_name %>
+
+
+  
+  
+    <%= f.hidden_field :user_id, :value => session[:user_id]%>
+ 
 
   <div class="actions">
     <%= f.submit %>

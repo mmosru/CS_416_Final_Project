@@ -15,6 +15,15 @@ class SpeciesController < ApplicationController
       format.js
     end
   end
+  
+  def autocl
+    term = params[:search] + '%'
+    @species = Species.where(['lower(specific_name) LIKE ? OR lower(generic_name) LIKE ? OR lower(common_name) LIKE ?', term.downcase, term.downcase, term.downcase])
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
 
   # GET /species/1
   # GET /species/1.json
