@@ -7,7 +7,7 @@
        <b><li><a href="/species/new">List a new species</a></li></b>
        <b><li><a href="/sightings/new">Report a sighting</a></li></b>
        <b><li><a href="/mysightings">My sightings</a></li></b>
-       <b><li><a href="/signout">Sign out</a></li></b>
+       <b><li><%= link_to "Log out", signout_path, method: "delete" %></li></b>
     <% else %>
    
     <b><li><a href="/signup">Sign up (Create user acct for W.O.C.A.)</a></li></b>
