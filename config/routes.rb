@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :users
   
   get 'static_pages/home'
-  
+  get '/mysightings', to: 'sightings#mysightings'
   post '/search',  to: 'species#search'
   
   post '/autocl',  to: 'species#autocl'

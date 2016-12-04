@@ -16,8 +16,13 @@ class SightingsController < ApplicationController
   def new
     @sighting = Sighting.new
   end
-
-  # GET /sightings/1/edit
+ def mysightings
+   #@sighting = Sighting.find_by(user_id: params[:session][:user_id])
+   #@sighting = Sighting.where(user_id:current_user.id)
+   #@sighting = Sighting.all
+   @sighting = Sighting.where(user_id: session[:user_id])
+ end
+  # /sightings/1/edit
   def edit
   end
 
