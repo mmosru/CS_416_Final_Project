@@ -27,10 +27,10 @@
   </div>
   
 
-<% @species = Species.all %>
+<% @specieslist = Species.all %>
 
 <%= f.label :species_id %>
-<%= f.collection_select :species_id, @species, :id, :common_name %>
+<%= f.collection_select :species_id, @specieslist, :id, :common_name %>
 
 
   
