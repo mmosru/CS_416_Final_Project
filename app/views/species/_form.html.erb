@@ -1,3 +1,15 @@
+<style>
+body{
+  background-color: #b3ffb3;
+}
+table th
+{
+padding:15px;
+}
+</style>
+
+<%= render 'layouts/logo' %>
+<li><a href="/"> Home </a></li>
 <%= form_for(species) do |f| %>
   <% if species.errors.any? %>
     <div id="error_explanation">

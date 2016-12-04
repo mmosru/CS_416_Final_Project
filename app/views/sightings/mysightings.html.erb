@@ -3,10 +3,16 @@ table th
 {
 padding:15px;
 }
+body{
+  background-color: #b3ffb3;
+}
+
 </style>
 
 <p id="notice"><%= notice %></p>
 <%= render 'layouts/logo' %>
+<br>
+  <%= render 'layouts/header' %>
 <h1>My Sightings</h1>
 
 <table>
@@ -39,4 +45,3 @@ padding:15px;
 
 <br>
 
-<%= link_to 'New Sighting', new_sighting_path %>

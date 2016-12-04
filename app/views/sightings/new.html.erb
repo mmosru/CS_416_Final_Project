@@ -1,5 +1,12 @@
-<h1>New Sighting</h1>
+<style>
+body{
+  background-color: #b3ffb3;
+}
 
+</style>
+
+<h1>New Sighting</h1>
+<%= render 'layouts/logo' %>
 <%= render 'form', sighting: @sighting %>
 
 <%= link_to 'Back', sightings_path %>
